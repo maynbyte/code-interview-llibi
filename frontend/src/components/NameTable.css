@@ -1,0 +1,216 @@
+.table-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px 0;
+}
+
+.table-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.names-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.names-table thead {
+  background: #f8f9fa;
+}
+
+.names-table th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.names-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.2s;
+}
+
+.names-table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.names-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.names-table td {
+  padding: 16px;
+  color: #333;
+}
+
+.name-cell {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.result-badge {
+  background: #ff9500;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.date-cell {
+  color: #666;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background: #007aff;
+  color: #fff;
+}
+
+.btn-edit:hover {
+  background: #0051d5;
+}
+
+.btn-delete {
+  background: #ff3b30;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+
+.btn-save {
+  background: #34c759;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.btn-save:hover {
+  background: #28a745;
+}
+
+.btn-cancel {
+  background: #8e8e93;
+  color: #fff;
+  padding: 8px 12px;
+}
+
+.btn-cancel:hover {
+  background: #636366;
+}
+
+.edit-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.edit-cell input {
+  padding: 8px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.edit-cell input:focus {
+  outline: none;
+  border-color: #007aff;
+}
+
+.edit-cell input.input-error {
+  border-color: #ff3b30;
+}
+
+.error-text {
+  color: #ff3b30;
+  font-size: 12px;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-size: 18px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 18px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    margin: 20px 0;
+  }
+
+  .names-table th,
+  .names-table td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+
+  .name-cell {
+    font-size: 14px;
+  }
+
+  .result-badge {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .action-buttons button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  .names-table {
+    min-width: 600px;
+  }
+}
